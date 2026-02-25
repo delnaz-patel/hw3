@@ -1,0 +1,24 @@
+<h1>New Post</h1>
+
+<form action="/entries" method="post">
+  <input type="hidden" name="place_id" value="<%= @place.id %>">
+
+  <div>
+    <label for="title">Title</label>
+    <input id="title" type="text" name="title">
+  </div>
+
+  <div>
+    <label for="description">Description</label>
+    <textarea id="description" name="description"></textarea>
+  </div>
+
+  <div>
+    <label for="occurred_on">Date</label>
+    <input id="occurred_on" type="date" name="occurred_on">
+  </div>
+
+  <button type="submit">Create Entry</button>
+</form>
+
+<p><a href="/places/<%= @place.id %>">Back to <%= @place.name %></a></p>
